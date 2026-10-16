@@ -1230,7 +1230,7 @@ sa-MLDSA44-ECDSA-P256-SHA256 SIGNATURE-ALGORITHM ::=
     </section>
     <section anchor="sec-asn1-module">
       <name>ASN.1 Module</name>
-
+        <t>This section includes the ASN.1 module <xref target="X.680"/> for Composite ML-KEM and uses the Basic Encoding Rules (BER) and the Distinguished Encoding Rules (DER) <xref target="X.690"/>. This module imports objects from <xref target="RFC5912"/> and <xref target="RFC9629"/>.</t>
       <sourcecode type="asn.1"><![CDATA[
 <CODE STARTS>
 
@@ -1953,7 +1953,18 @@ Process:
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8032.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8410.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9881.xml"/>
-        <reference anchor="X.690" target="https://www.itu.int/rec/T-REC-X.690">
+        <reference anchor="X.680" target="https://www.itu.int/rec/T-REC-X.680">
+          <front>
+            <title>Information technology - Abstract Syntax Notation One (ASN.1): Specification of basic notation</title>
+            <author>
+              <organization>ITU-T</organization>
+            </author>
+            <date year="2021" month="February"/>
+          </front>
+          <seriesInfo name="ITU-T Recommendation" value="X.680"/>
+          <seriesInfo name="ISO/IEC" value="8824-1:2021"/>
+        </reference>
+		<reference anchor="X.690" target="https://www.itu.int/rec/T-REC-X.690">
           <front>
             <title>Information technology - ASN.1 encoding rules: Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER) and Distinguished Encoding Rules (DER)</title>
             <author>
