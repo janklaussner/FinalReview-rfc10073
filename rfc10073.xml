@@ -161,7 +161,7 @@ In addition, the following terminology is used throughout this specification:</t
         <name>Notations</name>
         <t>The algorithm descriptions use Python-like syntax. The following symbols deserve special mention:</t>
         <dl spacing="normal" newline="true">
-            <dt><tt>||</tt></dt><dd>represents concatenation of two-byte arrays.</dd>
+            <dt><tt>||</tt></dt><dd>represents concatenation of two byte-arrays.</dd>
             <dt><tt>[:]</tt></dt><dd>represents byte array slicing.</dd>
             <dt><tt>(a, b)</tt></dt><dd>represents a pair of values <tt>a</tt> and <tt>b</tt>. Typically, this indicates that a function returns multiple values; the exact conveyance mechanism (tuple, struct, output parameters, etc.) is left to the implementer.</dd>
             <dt><tt>(a, _)</tt></dt><dd>represents a pair of values where one (the second one in this case) is ignored.</dd>
@@ -345,7 +345,7 @@ Implicit inputs mapped from <OID>:
           algorithm. Additionally, the composite label is passed
           into the underlying ML-DSA primitive as the ctx.
           Signature Label values are defined in the
-          "Signature Label Values" section below.
+          "Algorithm Identifiers and Parameters" section below.
 
   PH      The function used to pre-hash M.
 
@@ -438,7 +438,7 @@ Implicit inputs mapped from <OID>:
           algorithm. Additionally, the composite label is passed
           into the underlying ML-DSA primitive as the ctx.
           Signature Label values are defined in the
-          "Signature Label Values" section below.
+          "Algorithm Identifiers and Parameters" section below.
 
   PH      The function used to pre-hash M.
 
@@ -1517,7 +1517,8 @@ sa-MLDSA87-ECDSA-P521-SHA512 SIGNATURE-ALGORITHM ::=
        pk-MLDSA87-ECDSA-P521-SHA512 }
 
 
-SignatureAlgorithmSet SIGNATURE-ALGORITHM ::= {
+SignatureAlgs SIGNATURE-ALGORITHM ::= {
+  -- This expands SignatureAlgorithms from [RFC 5912]
   sa-MLDSA44-RSA2048-PSS-SHA256 |
   sa-MLDSA44-RSA2048-PKCS15-SHA256 |
   sa-MLDSA44-Ed25519-SHA512 |
@@ -1537,6 +1538,29 @@ SignatureAlgorithmSet SIGNATURE-ALGORITHM ::= {
   sa-MLDSA87-RSA4096-PSS-SHA512 |
   sa-MLDSA87-ECDSA-P521-SHA512,
   ... }
+
+PublicKeys PUBLIC-KEY ::= {
+  -- This expands PublicKeyAlgorithms from [RFC 5912]
+  pk-MLDSA44-RSA2048-PSS-SHA256 |
+  pk-MLDSA44-RSA2048-PKCS15-SHA256 |
+  pk-MLDSA44-Ed25519-SHA512 |
+  pk-MLDSA44-ECDSA-P256-SHA256 |
+  pk-MLDSA65-RSA3072-PSS-SHA512 |
+  pk-MLDSA65-RSA3072-PKCS15-SHA512 |
+  pk-MLDSA65-RSA4096-PSS-SHA512 |
+  pk-MLDSA65-RSA4096-PKCS15-SHA512 |
+  pk-MLDSA65-ECDSA-P256-SHA512 |
+  pk-MLDSA65-ECDSA-P384-SHA512 |
+  pk-MLDSA65-ECDSA-brainpoolP256r1-SHA512 |
+  pk-MLDSA65-Ed25519-SHA512 |
+  pk-MLDSA87-ECDSA-P384-SHA512 |
+  pk-MLDSA87-ECDSA-brainpoolP384r1-SHA512 |
+  pk-MLDSA87-Ed448-SHAKE256 |
+  pk-MLDSA87-RSA3072-PSS-SHA512 |
+  pk-MLDSA87-RSA4096-PSS-SHA512 |
+  pk-MLDSA87-ECDSA-P521-SHA512,
+  ...
+}
 
 END
 
@@ -1890,7 +1914,7 @@ Implicit inputs mapped from <OID>:
           algorithm. Additionally, the composite label is passed
           into the underlying ML-DSA primitive as the ctx.
           Signature Label values are defined in the
-          "Signature Label Values" section below.
+          "Algorithm Identifiers and Parameters" section below.
 
 Process:
 
