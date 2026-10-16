@@ -2134,7 +2134,7 @@ Process:
           <t>When the underlying RSA or EC value is itself DER encoded, integer values could occasionally be shorter than expected due to leading zeros being dropped from the encoding.</t>
         </li>
       </ul>
-      <t>Size values marked with an asterisk (*) in the table below are not fixed but are maximum possible values for the composite key or ciphertext. Implementations should be careful when performing length checking based on such values.</t>
+      <t>Size values marked with an asterisk (*) in the table below are not fixed but are maximum possible values for the composite key or signature. Implementations should be careful when performing length checking based on such values.</t>
       <t>Non-hybrid ML-DSA is included for reference.</t>
 
 <table anchor="tab-size-values">
