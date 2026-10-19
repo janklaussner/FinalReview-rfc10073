@@ -161,7 +161,7 @@ In addition, the following terminology is used throughout this specification:</t
         <name>Notations</name>
         <t>The algorithm descriptions use Python-like syntax. The following symbols deserve special mention:</t>
         <dl spacing="normal" newline="true">
-            <dt><tt>||</tt></dt><dd>represents concatenation of two byte-arrays.</dd>
+            <dt><tt>||</tt></dt><dd>represents concatenation of two byte arrays.</dd>
             <dt><tt>[:]</tt></dt><dd>represents byte array slicing.</dd>
             <dt><tt>(a, b)</tt></dt><dd>represents a pair of values <tt>a</tt> and <tt>b</tt>. Typically, this indicates that a function returns multiple values; the exact conveyance mechanism (tuple, struct, output parameters, etc.) is left to the implementer.</dd>
             <dt><tt>(a, _)</tt></dt><dd>represents a pair of values where one (the second one in this case) is ignored.</dd>
