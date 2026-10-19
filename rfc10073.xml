@@ -1518,7 +1518,7 @@ sa-MLDSA87-ECDSA-P521-SHA512 SIGNATURE-ALGORITHM ::=
 
 
 SignatureAlgs SIGNATURE-ALGORITHM ::= {
-  -- This expands SignatureAlgorithms from [RFC 5912]
+  -- This expands SignatureAlgorithms from RFC 5912
   sa-MLDSA44-RSA2048-PSS-SHA256 |
   sa-MLDSA44-RSA2048-PKCS15-SHA256 |
   sa-MLDSA44-Ed25519-SHA512 |
@@ -1540,7 +1540,7 @@ SignatureAlgs SIGNATURE-ALGORITHM ::= {
   ... }
 
 PublicKeys PUBLIC-KEY ::= {
-  -- This expands PublicKeyAlgorithms from [RFC 5912]
+  -- This expands PublicKeyAlgorithms from RFC 5912
   pk-MLDSA44-RSA2048-PSS-SHA256 |
   pk-MLDSA44-RSA2048-PKCS15-SHA256 |
   pk-MLDSA44-Ed25519-SHA512 |
