@@ -84,7 +84,7 @@ For instance, the aggressive migration timelines may require deploying Post-Quan
       <t>Cautious implementers may opt to combine cryptographic algorithms in such a way that an adversary would need to break all of them simultaneously to compromise the protected data. These mechanisms are referred to as "Post-Quantum Traditional (PQ/T) Hybrids" <xref target="RFC9794"/>.</t>
       <t>This specification defines a specific instantiation of the PQ/T hybrid paradigm called "composite" where multiple cryptographic algorithms are combined to form a single signature algorithm. The composite algorithm presents a single public key and signature value such that it can be treated as a single atomic algorithm at the protocol level. This provides a property referred to as "protocol backwards compatibility" since it can be applied to protocols that are not explicitly hybrid aware. The idea of a composite was first presented in <xref target="Bindel2017"/>.
 Composite algorithms retain some security even if one of their component algorithms is broken, which is discussed in detail in <xref target="sec-cons"/>.
-This specification creates PQ/T Hybrids with the Module-Lattice-Based Digital Signature Algorithm (ML-DSA), defined in <xref target="FIPS.204"/> as the Post-Quantum (PQ) component.
+This specification creates PQ/T hybrids with the Module-Lattice-Based Digital Signature Algorithm (ML-DSA), defined in <xref target="FIPS.204"/> as the Post-Quantum (PQ) component.
 Instantiations of the Composite ML-DSA scheme are provided based on ML-DSA, RSASSA-PSS, RSASSA-PKCS1-v1_5, ECDSA, Ed25519, and Ed448.
 The full list of algorithms registered by this specification is provided in <xref target="sec-alg-parms"/>.
 Backwards compatibility in the sense of upgraded systems continuing to interoperate with legacy systems is not directly covered in this specification, but it is the subject of <xref target="sec-backwards-compat"/>.</t>
@@ -147,7 +147,7 @@ In addition, the following terminology is used throughout this specification:</t
   Typically, this means that the new feature fits within a defined
   extension point of the protocol instead of requiring a structural
   change to the protocol.
-  This is notable because many PQ/T Hybrids require modification of
+  This is notable because many PQ/T hybrids require modification of
   the protocol to make it "hybrid aware", whereas this specification
   presents it as a standalone algorithm and thus can take advantage of
   existing cryptographic agility mechanisms.</dd>
